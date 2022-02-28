@@ -23,8 +23,8 @@ for intent in intents['intents']:
     for input in intent['inputs']:
         word_list = nltk.word_tokenize(input)
         words.extend(word_list)
-        documents.append(word_list, intent['tag'])
-        if intent['tag'] not in classes:
+        documents.append((word_list, intent['topics']))
+        if intent['topics'] not in classes:
             classes.append(intent['topics'])
 
 words = [lemmatizer.lemmatize(word)
@@ -69,5 +69,5 @@ model.compile(loss='categorical_crossentropy',
 
 model.fit(np.array(train_x), np.array(train_y),
           epochs=200, batch_size=5, verbose=1)
-model.save('cahtbot_model.model')
+model.save('chatbot_model.model')
 print("Done")
