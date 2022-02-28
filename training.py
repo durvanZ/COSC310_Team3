@@ -6,9 +6,9 @@ import numpy as np
 import nltk
 from nltk.stem import WordNetLemmatizer
 
-from keras.models import Sequential # here
-from keras.layers import Dense, Activation, Dropout
-from keras.optimizers import SGD
+from tensorflow.keras.models import Sequential # here
+from tensorflow.keras.layers import Dense, Activation, Dropout
+from tensorflow.keras.optimizers import SGD
 
 import nltk
 nltk.download('punkt')
