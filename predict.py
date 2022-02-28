@@ -38,14 +38,15 @@ def predict_classes(sentence):
     results.sort(key= lambda x: x[1], reverse= True)
     return_list= []
     for r in results:
-         return return_list.append({'intent': classes[r[0]], 'probability': str(r[1])})
+        return_list.append({'intent': classes[r[0]], 'probability': str(r[1])})
     return return_list
 def get_response(intents_list, intents_json):
     tag= intents_list[0]['intent']
     list_of_intents= intents_json['intents']
+    result = "Sorry, I can't understand what you mean" ##default output
     for i in list_of_intents:
-        if i['tag']== tag:
-            result= random.choice(i['responses'])
+        if i['inputs']== tag:
+            result= random.choice(i['outputs'])
             break
     return result
 
