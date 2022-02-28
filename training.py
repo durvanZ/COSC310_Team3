@@ -6,9 +6,14 @@ import numpy as np
 import nltk
 from nltk.stem import WordNetLemmatizer
 
-from tensorflow.keras.models import sequential
-from tensorflow.keras.layers import Dense, Activation, Dropout
-from tensorflow.keras.optimizers import SGD
+from keras.models import Sequential # here
+from keras.layers import Dense, Activation, Dropout
+from keras.optimizers import SGD
+
+import nltk
+nltk.download('punkt')
+import nltk
+nltk.download('wordnet')
 
 lemmatizer = WordNetLemmatizer()
 
@@ -27,6 +32,8 @@ for intent in intents['intents']:
         if intent['topics'] not in classes:
             classes.append(intent['topics'])
 
+print(documents)
+
 words = [lemmatizer.lemmatize(word)
          for word in words if word not in ignore_letters]
 words = sorted(set(words))
@@ -37,12 +44,12 @@ pickle.dump(words, open('words.pk1', 'wb'))
 pickle.dump(words, open('classes.pk1', 'wb'))
 
 training = []
-output_empty = [0] + len(classes)
+output_empty = [0] * len(classes) #here
 
 for document in documents:
     bag = []
     word_inputs = document[0]
-    word_inputs = [lemmatizer.lammetize(word.lower()) for word in word_inputs]
+    word_inputs = [lemmatizer.lemmatize(word.lower()) for word in word_inputs] #here
     for word in words:
         bag.append(1) if word in word_inputs else bag.append(0)
 
