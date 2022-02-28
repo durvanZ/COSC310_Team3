@@ -14,8 +14,8 @@ import pickle
 from tensorflow.keras.models import load_model
 lemmatizer= WordNetLemmatizer()
 intents= json.loads(open('intents.json').read())
-words= pickle.load(open('words.pkl', 'rb'))
-classes= pickle.load(open('classes.pkl', 'rb'))
+words= pickle.load(open('words.pk1', 'rb'))
+classes= pickle.load(open('classes.pk1', 'rb'))
 model= load_model('chatbot_model.model')
 
 def clean_up_sentence(sentence):
