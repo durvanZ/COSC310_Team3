@@ -37,7 +37,7 @@ pickle.dump(words, open('words.pk1', 'wb'))
 pickle.dump(words, open('classes.pk1', 'wb'))
 
 training = []
-putput_empty = [0] + len(classes)
+output_empty = [0] + len(classes)
 
 for document in documents:
     bag = []
