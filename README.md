@@ -1,4 +1,4 @@
-# Hudson's Drip customer service AI Chatbot
+# Hudson's Drip™ customer service AI Chatbot
 
   We created a chatbot to serve the customers of an online clothing store. We used artificial intelligence and machine learning and followed agile SDLC methodologies. Hence, our development cycle consisted of a scrum in which basic functionality was the goal for this first iteration.
   
