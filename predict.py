@@ -16,24 +16,24 @@ def clean_up_sentence(sentence):
     sentence_words= nltk.word_tokenize(sentence)
     sentence_words= [lemmatizer.lemmatize(word) for word in sentence_words]
     return sentence_words
-def bag_of_words(sentence):
+def bag_of_words(sentence): #convert sentence into a bag of word
     sentence_words= clean_up_sentence(sentence)
-    bag= [0]* len(words)
+    bag= [0]* len(words) #initial bag with just 0z
     for w in sentence_words:
         for i, word in enumerate(words):
             if word== w:
                 bag[i]= 1
     return np.array(bag)
 def predict_classes(sentence):
-    bow= bag_of_words(sentence)
-    res= model.predict(np.array([bow]))[0]
-    ERROR_THRESHOLD= 0.25
+    bow= bag_of_words(sentence) #create a bag of words
+    res= model.predict(np.array([bow]))[0] #predicts classes based on the bag of words
+    ERROR_THRESHOLD= 0.25 #certin threshold so not much uncertainty
     results= [[i,r] for i, r in enumerate(res) if r> ERROR_THRESHOLD]
     results.sort(key= lambda x: x[1], reverse= True)
     return_list= []
     for r in results:
-        return_list.append({'intent': classes[r[0]], 'probability': str(r[1])})
-    return return_list
+        return_list.append({'intent': classes[r[0]], 'probability': str(r[1])}) #first one is the index next one is the result
+    return return_list #return list full of intents and probabilities
 def get_response(intents_list, intents_json):
     diagnostic = str(intents_list)
     tag= intents_list[0]['intent']
@@ -43,7 +43,7 @@ def get_response(intents_list, intents_json):
     ## print(tag)
     for i in list_of_intents:
         if i['inputs']== tag:
-            result= random.choice(i['outputs'])
+            result= random.choice(i['outputs']) #assigns output messages to be printed
             break
     return result
 
