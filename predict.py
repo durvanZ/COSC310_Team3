@@ -1,9 +1,3 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
 import random
 import numpy as np
 import json
@@ -41,9 +35,12 @@ def predict_classes(sentence):
         return_list.append({'intent': classes[r[0]], 'probability': str(r[1])})
     return return_list
 def get_response(intents_list, intents_json):
+    diagnostic = str(intents_list)
     tag= intents_list[0]['intent']
     list_of_intents= intents_json['intents']
-    result = "Sorry, I can't understand what you mean" ##default output
+    result = "Sorry, I can't understand what you mean, but here's my guess \n {0}".format(diagnostic) ##default output
+    ##print(list_of_intents)
+    ## print(tag)
     for i in list_of_intents:
         if i['inputs']== tag:
             result= random.choice(i['outputs'])
