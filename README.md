@@ -6,8 +6,8 @@
 
 Several libraries were used: random, json, pickle, numpy, nltk, and tensorflow.
 
-[JIRA Roadmap](https://durvan.atlassian.net/jira/software/projects/CT3/boards/)
-[Reference material](https://www.youtube.com/watch?v=1lwddP0KUEg)
+[JIRA Roadmap](https://durvan.atlassian.net/jira/software/projects/CT3/boards/).
+[Reference material](https://www.youtube.com/watch?v=1lwddP0KUEg).
   
 ## COSC 310 Group members:
 - Guiherme Durvan Zandamela
