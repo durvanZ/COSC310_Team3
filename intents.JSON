@@ -1,7 +1,7 @@
 {"intents":[
-    {"topics": "greetings",
-    "inputs": ["sup","hey","yo","hi","hello","morning","howdy","hola","good evening","good morning","good afternoon"],
-    "outputs": ["Hi, Welcome to customer support. What is your query?","Hey there! This is customer support. How can I help you?","Hi! What's up?","Greetings! This is customer support. What do you need help with?"]
+    {"topics":"greetings",
+    "inputs":["sup","hey","yo","hi","hello","morning","howdy","hola","good evening","good morning","good afternoon"],
+    "outputs":["Hi, Welcome to customer support. What is your query?","Hey there! This is customer support. How can I help you?","Hi! What's up?","Greetings! This is customer support. What do you need help with?"]
     },
     {"topics": "goodbyes",
         "inputs": ["Thank you!!!","bye","see you","see you","I'm heading out","I'm leaving","goodbye","adios","asta la vista"],
@@ -18,10 +18,6 @@
     {"topics": "order details",
         "inputs": ["Can I see my order details","How do I see my order details","Can I see my order information","How do I see my order information","Can I see my order info","How do I see my order info","Can I check my order information","How do I check my order information","Check order","See my order","I want to see information about my order","Show me my order details","Show me my purchase","Can I see my purchases"],
         "outputs": ["Easy! Type in your 6-digit order number and I'll show it to you.","Type in your 6-digit order number"]
-    },
-    {"topics": "order number",
-        "inputs": ["123456","926426","000000","111111","125029","410251","880124","333333","958311","987654"],
-        "outputs": ["Sorry, I could not find this order."]
     },
     {"topics": "returns",
         "inputs": ["how do I return","It is too big","It is too small","It doesn't fit","It's too large","It's too tight","My order sucks","These products suck","The item is broken","I'd like to return it","Can I get my money back If I return","Can I return for money or is it only in store credit?","Can I get store credit","How long do I have to return","What's the deadline for returns","Can I swap for a different item","The device is damaged","Can I get some information on returns","How do I return an item"],
@@ -55,5 +51,4 @@
         "inputs": ["For how long have you been in business","How old is this store","Are you guys seasoned in selling clothes","This must be a really old brand"],
         "outputs": ["We've been in business since 1917. We are titans at serving the community.","Our brand was established in 1917 by Lord Jorvan Rockefeller. We're proud to continue serving the community."]
     }
-    
 ]}

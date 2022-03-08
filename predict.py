@@ -7,9 +7,13 @@ import pickle
 
 from tensorflow.keras.models import load_model
 lemmatizer= WordNetLemmatizer()
-intents= json.loads(open('intents.json').read())
+intents= json.loads(open('intents.JSON').read())
+for i in intents['intents']:
+    print("1: \n {0}".format(i))
 words= pickle.load(open('words.pk1', 'rb'))
 classes= pickle.load(open('classes.pk1', 'rb'))
+print("The classes: \n {0}".format(classes))
+print("The words: \n {0}".format(words))
 model= load_model('chatbot_model.model')
 
 def clean_up_sentence(sentence):
@@ -36,18 +40,21 @@ def predict_classes(sentence):
     return return_list #return list full of intents and probabilities
 def get_response(intents_list, intents_json):
     diagnostic = str(intents_list)
+    print(intents_list)
     tag= intents_list[0]['intent']
+    print(tag)
     list_of_intents= intents_json['intents']
-    result = "Sorry, I can't understand what you mean, but here's my guess \n {0}".format(diagnostic) ##default output
-    ##print(list_of_intents)
-    ## print(tag)
+    result = "Sorry, I can't understand what you mean, but here's my guess \n {0}".format(diagnostic) ##default output for when a response isnt found
     for i in list_of_intents:
-        if i['inputs']== tag:
-            result= random.choice(i['outputs']) #assigns output messages to be printed
+        print("the list: \n".format(list_of_intents))
+        print("The i: \n".format(i))
+        print("The inputs: \n".format(i['inputs']))
+        if i['topics']== tag:
+            result= random.choice(i['outputs'])
             break
     return result
 
-print("Yeaaaaah! Let's go. The bot is running babyyyy!")
+print("Hi, Welcome to Hudson's drip customer service")
 
 while True:
     message= input("")
