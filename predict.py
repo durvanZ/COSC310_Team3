@@ -42,7 +42,7 @@ def get_response(intents_list, intents_json):
     ##print(list_of_intents)
     ## print(tag)
     for i in list_of_intents:
-        if i['inputs']== tag:
+        if i['topics']== tag:
             result= random.choice(i['outputs']) #assigns output messages to be printed
             break
     return result
