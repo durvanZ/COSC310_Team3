@@ -15,6 +15,8 @@ classes = pickle.load(open('classes.pk1', 'rb'))
 model = load_model('chatbot_model.h5')
 
 
+responses_outside_topics = ["I will connect you with our customer support team for further details.", "Could you please repeat that?", "I did not get that.", "I am not sure we have what you are looking for.", "Our customer support team will get in touch with you soon."]
+
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
     sentence_words = [lemmatizer.lemmatize(word) for word in sentence_words]
@@ -47,12 +49,12 @@ def predict_classes(sentence):
 
 def get_response(intents_list, intents_json):
     diagnostic = str(intents_list)
-    tag = intents_list[0]['intent']
-    list_of_intents = intents_json['intents']
-    result = "Sorry, I can't understand what you mean, but here's my guess \n {0}".format(
-        diagnostic)  # default output
-    # print(list_of_intents)
-    # print(tag)
+    tag= intents_list[0]['intent']
+    list_of_intents= intents_json['intents']
+    result = random.choice(responses_outside_topics) ##default output
+    ##print(list_of_intents)
+    ## print(tag)
+
     for i in list_of_intents:
         if i['topics'] == tag:
             # assigns output messages to be printed
