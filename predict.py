@@ -48,9 +48,3 @@ def get_response(intents_list, intents_json):
     return result
 
 print("Yeaaaaah! Let's go. The bot is running babyyyy!")
-
-while True:
-    message= input("")
-    ints= predict_classes(message)
-    res= get_response(ints, intents)
-    print(res)
