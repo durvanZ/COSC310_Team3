@@ -1,59 +1,458 @@
-{"intents":[
-    {"topics": "greetings",
-    "inputs": ["sup","hey","yo","hi","hello","morning","howdy","hola","good evening","good morning","good afternoon"],
-    "outputs": ["Hi, Welcome to customer support. What is your query?","Hey there! This is customer support. How can I help you?","Hi! What's up?","Greetings! This is customer support. What do you need help with?"]
+{
+  "intents": [
+    {
+      "topics": "greetings",
+      "inputs": [
+        "sup",
+        "hey",
+        "yo",
+        "hi",
+        "hello",
+        "morning",
+        "howdy",
+        "hola",
+        "good evening",
+        "good morning",
+        "good afternoon"
+      ],
+      "outputs": [
+        "Hi, Welcome to customer support. What is your query?",
+        "Hey there! This is customer support. How can I help you?",
+        "Hi! What's up?",
+        "Greetings! This is customer support. What do you need help with?"
+      ]
     },
-    {"topics": "goodbyes",
-        "inputs": ["Thank you!!!","bye","see you","see you","I'm heading out","I'm leaving","goodbye","adios","asta la vista"],
-        "outputs": ["I'll be here anytime for you!","It is my pleasure!","My pleasure!","You're welcome","Come back anytime","No problem"]
+    {
+      "topics": "goodbyes",
+      "inputs": [
+        "Thank you!!!",
+        "bye",
+        "see you",
+        "see you",
+        "I'm heading out",
+        "I'm leaving",
+        "goodbye",
+        "adios",
+        "asta la vista"
+      ],
+      "outputs": [
+        "I'll be here anytime for you!",
+        "It is my pleasure!",
+        "My pleasure!",
+        "You're welcome",
+        "Come back anytime",
+        "No problem"
+      ]
     },
-    {"topics": "apologies",
-        "inputs": ["Oh! I'm so sorry","Oh I am so sorry","sorry","my bad","I apologize","pardon me","excuse my"],
-        "outputs": ["It's okay","It's alright","No worries","It's ok","No problem"]
+    {
+      "topics": "apologies",
+      "inputs": [
+        "Oh! I'm so sorry",
+        "Oh I am so sorry",
+        "sorry",
+        "my bad",
+        "I apologize",
+        "pardon me",
+        "excuse my"
+      ],
+      "outputs": [
+        "It's okay",
+        "It's alright",
+        "No worries",
+        "It's ok",
+        "No problem"
+      ]
     },
-    {"topics": "delivery date",
-        "inputs": ["Why is my order taking long","When is it going to be delivered","What is the delivery date","How long should I wait for it","Will they take long to arrive","When will it arrive","How long does it take to ship","How slow is the shipping","How quick is the shipping","How many weeks should it take","Could you estimate the delivery date","Could you please give me an estimate of delivery time","By when should I expect to have it delivered"],
-        "outputs": ["Delivery times have been impacted by supply chain issues. To know more about your order you could ask for an order breakdown","I appreciate your patience. However, we've been struggling with the supply chain lately. I could bring up your order details if you ask me.","For delivery estimates you can request to see your order information"]
+    {
+      "topics": "delivery date",
+      "inputs": [
+        "Why is my order taking long",
+        "When is it going to be delivered",
+        "What is the delivery date",
+        "How long should I wait for it",
+        "Will they take long to arrive",
+        "When will it arrive",
+        "How long does it take to ship",
+        "How slow is the shipping",
+        "How quick is the shipping",
+        "How many weeks should it take",
+        "Could you estimate the delivery date",
+        "Could you please give me an estimate of delivery time",
+        "By when should I expect to have it delivered"
+      ],
+      "outputs": [
+        "Delivery times have been impacted by supply chain issues. To know more about your order you could ask for an order breakdown",
+        "I appreciate your patience. However, we've been struggling with the supply chain lately. I could bring up your order details if you ask me.",
+        "For delivery estimates you can request to see your order information"
+      ]
     },
-    {"topics": "order details",
-        "inputs": ["Can I see my order details","How do I see my order details","Can I see my order information","How do I see my order information","Can I see my order info","How do I see my order info","Can I check my order information","How do I check my order information","Check order","See my order","I want to see information about my order","Show me my order details","Show me my purchase","Can I see my purchases"],
-        "outputs": ["Easy! Type in your 6-digit order number and I'll show it to you.","Type in your 6-digit order number"]
+    {
+      "topics": "order details",
+      "inputs": [
+        "Can I see my order details",
+        "How do I see my order details",
+        "Can I see my order information",
+        "How do I see my order information",
+        "Can I see my order info",
+        "How do I see my order info",
+        "Can I check my order information",
+        "How do I check my order information",
+        "Check order",
+        "See my order",
+        "I want to see information about my order",
+        "Show me my order details",
+        "Show me my purchase",
+        "Can I see my purchases"
+      ],
+      "outputs": [
+        "Easy! Type in your 6-digit order number and I'll show it to you.",
+        "Type in your 6-digit order number"
+      ]
     },
-    {"topics": "order number",
-        "inputs": ["123456","926426","000000","111111","125029","410251","880124","333333","958311","987654"],
-        "outputs": ["Sorry, I could not find this order."]
+    {
+      "topics": "order number",
+      "inputs": [
+        "123456",
+        "926426",
+        "000000",
+        "111111",
+        "125029",
+        "410251",
+        "880124",
+        "333333",
+        "958311",
+        "987654"
+      ],
+      "outputs": ["Sorry, I could not find this order."]
     },
-    {"topics": "returns",
-        "inputs": ["how do I return","It is too big","It is too small","It doesn't fit","It's too large","It's too tight","My order sucks","These products suck","The item is broken","I'd like to return it","Can I get my money back If I return","Can I return for money or is it only in store credit?","Can I get store credit","How long do I have to return","What's the deadline for returns","Can I swap for a different item","The device is damaged","Can I get some information on returns","How do I return an item"],
-        "outputs": ["You can return an item and get a cash refund for up to 30 business days after the date of purchase. Items purchased on-sale can only be returned for store credit.","Items can be returned within 30 days or original purchase. If you purchased a product which was on sale, you can return it for store credit. Anything else can be refunded to your credit card."]
+    {
+      "topics": "returns",
+      "inputs": [
+        "how do I return",
+        "It is too big",
+        "It is too small",
+        "It doesn't fit",
+        "It's too large",
+        "It's too tight",
+        "My order sucks",
+        "These products suck",
+        "The item is broken",
+        "I'd like to return it",
+        "Can I get my money back If I return",
+        "Can I return for money or is it only in store credit?",
+        "Can I get store credit",
+        "How long do I have to return",
+        "What's the deadline for returns",
+        "Can I swap for a different item",
+        "The device is damaged",
+        "Can I get some information on returns",
+        "How do I return an item"
+      ],
+      "outputs": [
+        "You can return an item and get a cash refund for up to 30 business days after the date of purchase. Items purchased on-sale can only be returned for store credit.",
+        "Items can be returned within 30 days or original purchase. If you purchased a product which was on sale, you can return it for store credit. Anything else can be refunded to your credit card."
+      ]
     },
-    {"topics": "tech issues",
-        "inputs": ["why is my browser glitching","the page isn't loading","why isn't it letting me add to cart","I am trying to open the image but it won't load","the website froze","why is the website so slow"],
-        "outputs": ["That seems to me like a technological issue. You can get tech support 24/7 by calling +1 250 259 5769","For tech support call +1 250 258 5769","Sorry, that is outside my expertise. You can call +1 250 258 5769 for tech support."]
+    {
+      "topics": "tech issues",
+      "inputs": [
+        "why is my browser glitching",
+        "the page isn't loading",
+        "why isn't it letting me add to cart",
+        "I am trying to open the image but it won't load",
+        "the website froze",
+        "why is the website so slow"
+      ],
+      "outputs": [
+        "That seems to me like a technological issue. You can get tech support 24/7 by calling +1 250 259 5769",
+        "For tech support call +1 250 258 5769",
+        "Sorry, that is outside my expertise. You can call +1 250 258 5769 for tech support."
+      ]
     },
-    {"topics": "in-person shopping",
-        "inputs": ["Are you guys open for in-person shopping","Can I  buy at the store","Is the store open","Are stores open","Is it possible to shop in person"],
-        "outputs": ["Absolutely! We'd be pleased to have you visit us, following the covid-19 provincial guidelines","Yes, you can shop in person, wearing your mask","Definetely. We are open from Monday to Saturday from 9 am to 5 pm."]
+    {
+      "topics": "in-person shopping",
+      "inputs": [
+        "Are you guys open for in-person shopping",
+        "Can I  buy at the store",
+        "Is the store open",
+        "Are stores open",
+        "Is it possible to shop in person"
+      ],
+      "outputs": [
+        "Absolutely! We'd be pleased to have you visit us, following the covid-19 provincial guidelines",
+        "Yes, you can shop in person, wearing your mask",
+        "Definetely. We are open from Monday to Saturday from 9 am to 5 pm."
+      ]
     },
-    {"topics": "trying clothes",
-        "inputs": ["Can I try","Can I try the item to see if it fits","Will it fit","I want to try it to to see if it fits","Am I able to try clothes on"],
-        "outputs": ["You can try clothes on when shopping in-person, except for underwear, of course.","You can try most items on when shopping in-person. Pay us a visit sometime."]
+    {
+      "topics": "trying clothes",
+      "inputs": [
+        "Can I try",
+        "Can I try the item to see if it fits",
+        "Will it fit",
+        "I want to try it to to see if it fits",
+        "Am I able to try clothes on"
+      ],
+      "outputs": [
+        "You can try clothes on when shopping in-person, except for underwear, of course.",
+        "You can try most items on when shopping in-person. Pay us a visit sometime."
+      ]
     },
-    {"topics": "covid-19",
-        "inputs": ["Do I have to wear my mask at the store","Are masks mandatory","Is there a mask mandate","What are the covid guidelines"],
-        "outputs": ["You do have to wear a mask when shopping in person. For more info click on the covid button in the upper right corner.","There is a mask mandate which covers our stores. For more info click on covid in the upper right corner."]
+    {
+      "topics": "covid-19",
+      "inputs": [
+        "Do I have to wear my mask at the store",
+        "Are masks mandatory",
+        "Is there a mask mandate",
+        "What are the covid guidelines"
+      ],
+      "outputs": [
+        "You do have to wear a mask when shopping in person. For more info click on the covid button in the upper right corner.",
+        "There is a mask mandate which covers our stores. For more info click on covid in the upper right corner."
+      ]
     },
-    {"topics": "cancelling",
-        "inputs": ["can I cancel my order","How do I cancel an order","Can I get a refund for an order","How to cancel"],
-        "outputs": ["You can cancel an order if it hasn't yet been shipped, and get a full refund. Otherwise, the only option is to return it. To do this call +1 778 258 5769.","You can cancel an order that hasn't yet been shipped, or return an order after it has been shipped. To do this call +1 778 258 5769."]
+    {
+      "topics": "cancelling",
+      "inputs": [
+        "can I cancel my order",
+        "How do I cancel an order",
+        "Can I get a refund for an order",
+        "How to cancel"
+      ],
+      "outputs": [
+        "You can cancel an order if it hasn't yet been shipped, and get a full refund. Otherwise, the only option is to return it. To do this call +1 778 258 5769.",
+        "You can cancel an order that hasn't yet been shipped, or return an order after it has been shipped. To do this call +1 778 258 5769."
+      ]
     },
-    {"topics": "opening hours",
-        "inputs": ["When should I come","At what time do you guys open","Are you open on sundays","Do you open on weekends","When do you guys close"],
-        "outputs": ["We open at 9 am and close at 5 pm everyday except sundays.","You can come between 9 am and 5 pm everyday but sundays.","We're open 9 to 5 from monday to saturday."]
+    {
+      "topics": "opening hours",
+      "inputs": [
+        "When should I come",
+        "At what time do you guys open",
+        "Are you open on sundays",
+        "Do you open on weekends",
+        "When do you guys close"
+      ],
+      "outputs": [
+        "We open at 9 am and close at 5 pm everyday except sundays.",
+        "You can come between 9 am and 5 pm everyday but sundays.",
+        "We're open 9 to 5 from monday to saturday."
+      ]
     },
-    {"topics": "Store age",
-        "inputs": ["For how long have you been in business","How old is this store","Are you guys seasoned in selling clothes","This must be a really old brand"],
-        "outputs": ["We've been in business since 1917. We are titans at serving the community.","Our brand was established in 1917 by Lord Jorvan Rockefeller. We're proud to continue serving the community."]
+    {
+      "topics": "Store age",
+      "inputs": [
+        "For how long have you been in business",
+        "How old is this store",
+        "Are you guys seasoned in selling clothes",
+        "This must be a really old brand"
+      ],
+      "outputs": [
+        "We've been in business since 1917. We are titans at serving the community.",
+        "Our brand was established in 1917 by Lord Jorvan Rockefeller. We're proud to continue serving the community."
+      ]
+    },
+    {
+      "topics": "Social media",
+      "inputs": ["social", "facebook", "twitter", "instagram"],
+      "outputs": [
+        "We are currently only on instagram, you can find us @HudsonsDrip",
+        "Sorry, we are currently only on instagram, @HudsonsDrip",
+        "Sorry, we are currently only on instagram, @HudsonsDrip",
+        "Yes! find us @HudsonsDrip"
+      ]
+    },
+
+    {
+      "topics": "Raw material sourcing",
+      "inputs": [
+        "renewable resources",
+        "source raw materials ethically",
+        "source materials sustainably"
+      ],
+      "outputs": [
+        "Thanks for your concern, everything we work with is renewable and our raw materials are ethically sourced.",
+        "For everything we source naturally, we replace twice as much.",
+        "Read more on our 'Renewable Policy' from the link at the bottom."
+      ]
+    },
+
+    {
+      "topics": "labour policy",
+      "inputs": [
+        "minimum wage",
+        "workers compensation",
+        "sweatshop",
+        "cheap labour",
+        "worker benefits",
+        "disabled workers"
+      ],
+      "outputs": [
+        "Thanks for your concern, we take care of our workers as they are part of our family. Their wellbeing and happiness is ours too.",
+        "Workers are given wages that are above the minimum specified by each country in which we have a factory.",
+        "Workers are compensated during holidays and injury recovery periods."
+      ]
+    },
+
+    {
+      "topics": "Sustainability",
+      "inputs": [
+        "recycling",
+        "plastics",
+        "global warming",
+        "drainage",
+        "emissions",
+        "carbon dioxide",
+        "weather",
+        "climate issues",
+        "ozone layer",
+        "air purity",
+        "pollution"
+      ],
+      "outputs": [
+        "We love our planet just as much as you therefore we are always alert about how much we output and how it impacts our planet.",
+        "Some of our products are made from recycled materials, check our inventory in the 'Go Green' section for more"
+      ]
+    },
+
+    {
+      "topics": "data storage",
+      "inputs": [
+        "data leaks",
+        "data storage",
+        "data privacy",
+        "data security",
+        "data hack"
+      ],
+      "outputs": [
+        "Our customers security is extremely important, data id stored in an encrypted server within the country.",
+        "The company observes the data privacy laws of Canada."
+      ]
+    },
+
+    {
+      "topics": "Made where?",
+      "inputs": [
+        "Where are your products made in?",
+        "Product origin",
+        "Country of manufacture",
+        "Made in country"
+      ],
+      "outputs": [
+        "Our products are usually made in Bangladesh, Turkey and Cambodia",
+        "Thanks for your concern, we always deal with manufacturers with fair labour policies."
+      ]
+    },
+
+    {
+      "topics": "Age group",
+      "inputs": [
+        "age",
+        "adults",
+        "baby",
+        "babies",
+        "teenagers",
+        "toddlers",
+        "young people",
+        "old people"
+      ],
+      "outputs": [
+        "We have products made for everyone and every age, wear them and enjoy!",
+        "Our products are distributed amongst various age groups.",
+        "We can customize clothes for a certain age group in case it is missing",
+        "Some clothes are specified for certain age groups."
+      ]
+    },
+
+    {
+      "topics": "Gender diversity",
+      "inputs": [
+        "males",
+        "females",
+        "sexuality",
+        "sex",
+        "men",
+        "women",
+        "unisex"
+      ],
+      "outputs": [
+        "Some of our products are uni-sex and are made for everyone!",
+        "You can filter out your search in the left column to find exactly what you are looking for.",
+        "We have inventory for males and females in this store."
+      ]
+    },
+
+    {
+      "topics": "Drop forecast",
+      "inputs": [
+        "When the next drop is",
+        "season release",
+        "summer release",
+        "winter release",
+        "spring release",
+        "fall release",
+        "new year release",
+        "season sale",
+        "new year release",
+        "seasonal discount",
+        "upcoming release"
+      ],
+      "outputs": [
+        "Drops are always announced on our instagram @HudsonsDrip. Make sure to follow and stay tuned!",
+        "Our future plans and drops are always annouced about on our instagram @HudsonsDrip, stay tuned and follow us!",
+        "Next drops for both genders and all age-groups will be on every drop, stay tuned!"
+      ]
+    },
+
+    {
+      "topics": "product type release",
+      "inputs": [
+        "product drops",
+        "sweater",
+        "shirt",
+        "coats",
+        "scarf",
+        "scarves",
+        "blazer",
+        "rain coat",
+        "swimming suits",
+        "polo",
+        "jeans",
+        "trousers",
+        "skirts",
+        "leggings",
+        "crop top",
+        "fashion week",
+        "incoming inventory"
+      ],
+      "outputs": [
+        "We are releasing clothes suited for the season soon.",
+        "We will be getting rid of our inventory to free space up for the upcoming season's clothes.",
+        "We are hosting a fashion week to showcase clothes for the upcoming season soon.",
+        "Some of our inventory is all season!"
+      ]
+    },
+
+    {
+      "topics": "Unknown topics",
+      "inputs": [
+        "electonics",
+        "asjhfjhfjdshfs",
+        "better quality clothes",
+        "Your brand sucks",
+        "better cheaper products",
+        "sponsorship deals",
+        "sakhasjhfakjhfasfhksdfhkdjshfkjds",
+        "free products"
+      ],
+      "outputs": [
+        "Sorry, I do not understand, check out our FAQS at the bottom of our home page!.",
+        "Apologies, I do not understand, check out our FAQS at the bottom of our home page!",
+        "Sorry, I do not seem to understand, check out our FAQS at the bottom of our home page!",
+        "I do not understand, but you can check out our FAQS at the bottom of our home page!",
+        "I do not seem to understand. Please check out our FAQS at the bottom of our home page!",
+        "Sorry, I do not understand, check out our FAQS at the bottom of our home page!!"
+      ]
     }
-    
-]}
+  ]
+}
