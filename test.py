@@ -22,6 +22,8 @@ intents = json.loads(open('intents.json').read())
 #model= load_model('chatbot_model.h5')
 
 # commented all the functions from the predict.py class
+
+
 '''def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
     sentence_words = [lemmatizer.lemmatize(word) for word in sentence_words]
