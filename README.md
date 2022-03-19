@@ -17,6 +17,16 @@ Several libraries were used: random, json, pickle, numpy, nltk, and tensorflow.
 - Jordan onwuvuche
 
 ### Assignment 2 tasks:
-Lakshay Karnwal - Worked on creating a graphical user interface for the user to enter the text in a chatbox and see the history of chat on the display screen. Also worked on creating the test.py module. The test.py module uses pytest framework to test important functions of the chatbot.
+Lakshay Karnwal - Worked on creating a graphical user interface for the user using python module tkinter - to enter the text in a chatbox and see the history of chat on the display screen. Also worked on creating the test.py module. The test.py module uses pytest framework to test important functions of the chatbot.
 
-![GUI Screenshot]("https://user-images.githubusercontent.com/60047109/159101357-051933d3-6567-40e7-bb1d-87293c75a9fe.png")
+#### GUI Implementation
+![GUI Screenshot](https://user-images.githubusercontent.com/60047109/159101357-051933d3-6567-40e7-bb1d-87293c75a9fe.png)
+
+The GUI was implemented using the Python tkinter module for graphical interfaces. Using this module I was able to easily create a text box where the user enters their query/text. The text entered in the text box is then displayed on the GUI screen along with the Chatbot's response. This helps the user see the chat just like on any traditional chatting application. This helps the app become intuitivey easy-to-use for the user.
+
+#### Test cases implementation
+![Unit Testing Screenshot](https://user-images.githubusercontent.com/60047109/159101549-550633ec-41f7-408e-8fa5-5a43b64d2d75.png)
+
+The Automated Unit Testing Framework used for this was pytest due to its easy to use module functions. I created multiple test cases for all the important functions which checks if all the functions are working as desired. You can run the Unit testing file using the pytest command. After running the test file, pytest displays a summary of failed and passed functions. If the functions do not pass that means the chatbot will have errors, if all the functions pass that means the program is working as desired.
+
+In the screenshot example above, one of the functions failed because the value of probability was not correct. This is a useful feature as it reduces effort to debug the code.
