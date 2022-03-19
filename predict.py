@@ -70,25 +70,3 @@ def get_mood(user_input):  # sentiment analysis to add empathy to responses
 
 
 print("Yeaaaaah! Let's go. The bot is running babyyyy!")
-empathy_response = ""
-cat_vids = "https://www.youtube.com/results?search_query=cat+videos"
-dank_memes = "https://www.reddit.com/r/dankmemes/"
-res = ""
-while True:
-    message = input("")
-    ints = predict_classes(message)
-    usermood = get_mood(message)
-    negative_vibes = usermood.get('neg')
-    positive_vibes = usermood.get('pos')
-    if (negative_vibes >= 0.6):
-        empathy_response = random.choice(["I am really sorry to hear that", "We're sorry about that...",
-                                         ":(( That's so unfortunate", "I understand your sentiment. Please allow me to help you, what do you need to know?"])
-        res = empathy_response
-        if (negative_vibes >= 0.7):
-            res += random.choice(
-                [f"Here are some cat videos: {cat_vids}", f"Here are some dank memes: {dank_memes}"])
-    elif (positive_vibes >= 0.7):
-        empathy_response = random.choice([":)", "Happy spring!!!", "I'm glad you're satistifed with my service",
-                                         "Fantastic!!!", "Awesome", "I love to hear that", "You fill my heart with joy :))"])+"\n"
-        res = empathy_response + get_response(ints, intents)
-    print(res)
