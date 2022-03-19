@@ -10,7 +10,7 @@ import json
 import nltk
 from nltk.stem import WordNetLemmatizer
 import pickle
-import pytest
+import pytest  # we are using the pytest framework for automated unit testing
 
 import nltk
 nltk.download('wordnet')
@@ -68,6 +68,7 @@ def get_response(intents_list, intents_json):
     return result'''
 
 
+# three different test cases, to test the seperation of words, and to test the seperating of commas
 def test_clean_up_sentence():
     test_cases = ["My name is Lakshay", "How do I order?", "Goodbye, see you"]
     expected_answers = ['My', 'name', 'is', 'Lakshay', 'How',
@@ -82,6 +83,7 @@ def test_clean_up_sentence():
     assert(answers == expected_answers)
 
 
+# three different test cases to check the presence of lemmetized senetence in the intents (from intent.json)
 def test_bag_of_words():
     test_case1 = "How do I return my order"
     test_case2 = "order details"
@@ -112,6 +114,7 @@ def test_bag_of_words():
     assert(np.array_equal(answer2, expected_answer2))
 
 
+# different test cases to predict the intent type along with its probablity
 def test_predict_classes():
     answer1 = predict_classes("Refund item")
     expected_answer1 = [{'intent': 'returns', 'probability': '0.8146781'}]
@@ -127,6 +130,7 @@ def test_predict_classes():
     assert answer3 == expected_answer3
 
 
+# test case to check if the response is taken from the correct intent
 def test_get_response():
     test_case = [{'intent': 'returns', 'probability': '0.8146781'}]
     res = get_response(test_case, intents)
