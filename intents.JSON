@@ -254,12 +254,7 @@
     },
     {
       "topics": "Social media",
-      "inputs": [
-        "Are you guys on any social media?",
-        "Does your store have a facebook account?",
-        "Does your store have a twitter account?",
-        "Does your store have an instagram account?"
-      ],
+      "inputs": ["social", "facebook", "twitter", "instagram"],
       "outputs": [
         "We are currently only on instagram, you can find us @HudsonsDrip",
         "Sorry, we are currently only on instagram, @HudsonsDrip",
@@ -269,18 +264,69 @@
     },
 
     {
-      "topics": "Ethical concerns",
+      "topics": "Raw material sourcing",
       "inputs": [
-        "Are the raw materials ethically sourced?",
-        "Where is the customers data stored?",
-        "Is your stores scale of output sustainable for our planet and its finite resources?",
-        "Are your workers being offered fair living wages?"
+        "renewable resources",
+        "source raw materials ethically",
+        "source materials sustainably"
       ],
       "outputs": [
         "Thanks for your concern, everything we work with is renewable and our raw materials are ethically sourced.",
+        "For everything we source naturally, we replace twice as much.",
+        "Read more on our 'Renewable Policy' from the link at the bottom."
+      ]
+    },
+
+    {
+      "topics": "labour policy",
+      "inputs": [
+        "minimum wage",
+        "workers compensation",
+        "sweatshop",
+        "cheap labour",
+        "worker benefits",
+        "disabled workers"
+      ],
+      "outputs": [
+        "Thanks for your concern, we take care of our workers as they are part of our family. Their wellbeing and happiness is ours too.",
+        "Workers are given wages that are above the minimum specified by each country in which we have a factory.",
+        "Workers are compensated during holidays and injury recovery periods."
+      ]
+    },
+
+    {
+      "topics": "Sustainability",
+      "inputs": [
+        "recycling",
+        "plastics",
+        "global warming",
+        "drainage",
+        "emissions",
+        "carbon dioxide",
+        "weather",
+        "climate issues",
+        "ozone layer",
+        "air purity",
+        "pollution"
+      ],
+      "outputs": [
+        "We love our planet just as much as you therefore we are always alert about how much we output and how it impacts our planet.",
+        "Some of our products are made from recycled materials, check our inventory in the 'Go Green' section for more"
+      ]
+    },
+
+    {
+      "topics": "data storage",
+      "inputs": [
+        "data leaks",
+        "data storage",
+        "data privacy",
+        "data security",
+        "data hack"
+      ],
+      "outputs": [
         "Our customers security is extremely important, data id stored in an encrypted server within the country.",
-        "We love our planet and we are always alert about how much we output and how it impacts our planet.",
-        "Thanks for your concern, we take care of our workers as they are part of our family. Their wellbeing and happiness is ours too."
+        "The company observes the data privacy laws of Canada."
       ]
     },
 
@@ -288,7 +334,9 @@
       "topics": "Made where?",
       "inputs": [
         "Where are your products made in?",
-        "We hope that your products are made in countries with fair labour policies?"
+        "Product origin",
+        "Country of manufacture",
+        "Made in country"
       ],
       "outputs": [
         "Our products are usually made in Bangladesh, Turkey and Cambodia",
@@ -297,169 +345,113 @@
     },
 
     {
-      "topics": "Diversity",
+      "topics": "Age group",
       "inputs": [
-        "Are your products made for males or females?",
-        "What are the age groups of your products?"
+        "age",
+        "adults",
+        "baby",
+        "babies",
+        "teenagers",
+        "toddlers",
+        "young people",
+        "old people"
       ],
       "outputs": [
-        "Our products are uni-sex and are made for everyone!",
-        "Our products are for everyone and every age, wear them and enjoy!"
+        "We have products made for everyone and every age, wear them and enjoy!",
+        "Our products are distributed amongst various age groups.",
+        "We can customize clothes for a certain age group in case it is missing",
+        "Some clothes are specified for certain age groups."
       ]
     },
 
     {
-      "topics": "Future drops",
+      "topics": "Gender diversity",
       "inputs": [
-        "When is the next drop?",
-        "What are you planning on dropping next?",
-        "Do future drops include all age groups and genders or are they dedicated for a specific group?"
+        "males",
+        "females",
+        "sexuality",
+        "sex",
+        "men",
+        "women",
+        "unisex"
+      ],
+      "outputs": [
+        "Some of our products are uni-sex and are made for everyone!",
+        "You can filter out your search in the left column to find exactly what you are looking for.",
+        "We have inventory for males and females in this store."
+      ]
+    },
+
+    {
+      "topics": "Drop forecast",
+      "inputs": [
+        "When the next drop is",
+        "season release",
+        "summer release",
+        "winter release",
+        "spring release",
+        "fall release",
+        "new year release",
+        "season sale",
+        "new year release",
+        "seasonal discount",
+        "upcoming release"
       ],
       "outputs": [
         "Drops are always announced on our instagram @HudsonsDrip. Make sure to follow and stay tuned!",
         "Our future plans and drops are always annouced about on our instagram @HudsonsDrip, stay tuned and follow us!",
-        "We make sure to cater every gender and age group on every drop, stay tuned!"
+        "Next drops for both genders and all age-groups will be on every drop, stay tuned!"
       ]
     },
 
     {
-      "topics": "Sizing",
+      "topics": "product type release",
       "inputs": [
-        "I can't find my size, its always out of stock!",
-        "What sizes do you offer?"
+        "product drops",
+        "sweater",
+        "shirt",
+        "coats",
+        "scarf",
+        "scarves",
+        "blazer",
+        "rain coat",
+        "swimming suits",
+        "polo",
+        "jeans",
+        "trousers",
+        "skirts",
+        "leggings",
+        "crop top",
+        "fashion week",
+        "incoming inventory"
       ],
       "outputs": [
-        "I am sorry about that, make sure to subscribe to our newsletter and follow us on instagram @HudsonBay to be notified of restocks.",
-        "Our product sizing ranges from XXS all the way to XXL."
+        "We are releasing clothes suited for the season soon.",
+        "We will be getting rid of our inventory to free space up for the upcoming season's clothes.",
+        "We are hosting a fashion week to showcase clothes for the upcoming season soon.",
+        "Some of our inventory is all season!"
       ]
     },
 
     {
       "topics": "Unknown topics",
       "inputs": [
-        "Do you guys sell electonics?",
+        "electonics",
         "asjhfjhfjdshfs",
-        "Why don't you start making better quality clothes?",
+        "better quality clothes",
         "Your brand sucks",
-        "NRML has better products than you guys, its cheaper",
-        "Are you guys into any sponsorship deals?",
+        "better cheaper products",
+        "sponsorship deals",
         "sakhasjhfakjhfasfhksdfhkdjshfkjds",
-        "Can you offer some free products?"
+        "free products"
       ],
       "outputs": [
-        "Sorry, I do not understand, check out our FAQS at the bottom of our home page!",
-        "Sorry, I do not understand, check out our FAQS at the bottom of our home page!",
-        "Sorry, I do not understand, check out our FAQS at the bottom of our home page!",
-        "Sorry, I do not understand, check out our FAQS at the bottom of our home page!",
-        "Sorry, I do not understand, check out our FAQS at the bottom of our home page!",
-        "Sorry, I do not understand, check out our FAQS at the bottom of our home page!",
-        "Sorry, I do not understand, check out our FAQS at the bottom of our home page!",
-        "Sorry, I do not understand, check out our FAQS at the bottom of our home page!"
-      ]
-    },
-    {
-      "topics": "Social media",
-      "inputs": [
-        "Are you guys on any social media?",
-        "Does your store have a facebook account?",
-        "Does your store have a twitter account?",
-        "Does your store have an instagram account?"
-      ],
-      "outputs": [
-        "We are currently only on instagram, you can find us @HudsonsDrip",
-        "Sorry, we are currently only on instagram, @HudsonsDrip",
-        "Sorry, we are currently only on instagram, @HudsonsDrip",
-        "Yes! find us @HudsonsDrip"
-      ]
-    },
-
-    {
-      "topics": "Ethical concerns",
-      "inputs": [
-        "Are the raw materials ethically sourced?",
-        "Where is the customers data stored?",
-        "Is your stores scale of output sustainable for our planet and its finite resources?",
-        "Are your workers being offered fair living wages?"
-      ],
-      "outputs": [
-        "Thanks for your concern, everything we work with is renewable and our raw materials are ethically sourced.",
-        "Our customers security is extremely important, data id stored in an encrypted server within the country.",
-        "We love our planet and we are always alert about how much we output and how it impacts our planet.",
-        "Thanks for your concern, we take care of our workers as they are part of our family. Their wellbeing and happiness is ours too."
-      ]
-    },
-
-    {
-      "topics": "Made where?",
-      "inputs": [
-        "Where are your products made in?",
-        "We hope that your products are made in countries with fair labour policies?"
-      ],
-      "outputs": [
-        "Our products are usually made in Bangladesh, Turkey and Cambodia",
-        "Thanks for your concern, we always deal with manufacturers with fair labour policies."
-      ]
-    },
-
-    {
-      "topics": "Diversity",
-      "inputs": [
-        "Are your products made for males or females?",
-        "What are the age groups of your products?"
-      ],
-      "outputs": [
-        "Our products are uni-sex and are made for everyone!",
-        "Our products are for everyone and every age, wear them and enjoy!"
-      ]
-    },
-
-    {
-      "topics": "Future drops",
-      "inputs": [
-        "When is the next drop?",
-        "What are you planning on dropping next?",
-        "Do future drops include all age groups and genders or are they dedicated for a specific group?"
-      ],
-      "outputs": [
-        "Drops are always announced on our instagram @HudsonsDrip. Make sure to follow and stay tuned!",
-        "Our future plans and drops are always annouced about on our instagram @HudsonsDrip, stay tuned and follow us!",
-        "We make sure to cater every gender and age group on every drop, stay tuned!"
-      ]
-    },
-
-    {
-      "topics": "Sizing",
-      "inputs": [
-        "I can't find my size, its always out of stock!",
-        "What sizes do you offer?"
-      ],
-      "outputs": [
-        "I am sorry about that, make sure to subscribe to our newsletter and follow us on instagram @HudsonBay to be notified of restocks.",
-        "Our product sizing ranges from XXS all the way to XXL."
-      ]
-    },
-
-    {
-      "topics": "Unknown topics",
-      "inputs": [
-        "Do you guys sell electonics?",
-        "asjhfjhfjdshfs",
-        "Why don't you start making better quality clothes?",
-        "Your brand sucks",
-        "NRML has better products than you guys, its cheaper",
-        "Are you guys into any sponsorship deals?",
-        "sakhasjhfakjhfasfhksdfhkdjshfkjds",
-        "Can you offer some free products?"
-      ],
-      "outputs": [
-        "Sorry, I do not understand, check out our FAQS at the bottom of our home page!",
-        "Sorry, I do not understand, check out our FAQS at the bottom of our home page!",
-        "Sorry, I do not understand, check out our FAQS at the bottom of our home page!",
-        "Sorry, I do not understand, check out our FAQS at the bottom of our home page!",
-        "Sorry, I do not understand, check out our FAQS at the bottom of our home page!",
-        "Sorry, I do not understand, check out our FAQS at the bottom of our home page!",
-        "Sorry, I do not understand, check out our FAQS at the bottom of our home page!",
-        "Sorry, I do not understand, check out our FAQS at the bottom of our home page!"
+        "Sorry, I do not understand, check out our FAQS at the bottom of our home page!.",
+        "Apologies, I do not understand, check out our FAQS at the bottom of our home page!",
+        "Sorry, I do not seem to understand, check out our FAQS at the bottom of our home page!",
+        "I do not understand, but you can check out our FAQS at the bottom of our home page!",
+        "I do not seem to understand. Please check out our FAQS at the bottom of our home page!",
+        "Sorry, I do not understand, check out our FAQS at the bottom of our home page!!"
       ]
     }
   ]
