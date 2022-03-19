@@ -1,6 +1,8 @@
 ## UNIT TESTING Explanation
 
-Unit Testing Framework: Pytest for Python
+Unit Testing Framework: Pytest for Python. I used the assert keyword from Pytest module to check if the return values of the function produce the desired result.
+
+![Assert keyword Screenshot](https://user-images.githubusercontent.com/60047109/159103547-d9933464-a8b3-4644-9e3c-377accb6cc31.png)
 
 Test functions are made for the following predict.py functions:
 1. clean_up_sentence()
@@ -74,3 +76,8 @@ To check if the function is working properly following test case are made:
 return value : randomly selected response from intents.json from the respective intent.
 One example of the return value is : "How do I return an item"
 
+#### Example of a testing session
+
+![Unit Testing Screenshot](https://user-images.githubusercontent.com/60047109/159101549-550633ec-41f7-408e-8fa5-5a43b64d2d75.png)
+
+In this example only one test case fails.
