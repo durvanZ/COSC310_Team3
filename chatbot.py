@@ -37,7 +37,7 @@ def send():
                                          ":(( That's so unfortunate.", "I understand your sentiment. Please allow me to help you, what do you need to know?"])
         res = empathy_response
         if (negative_vibes >= 0.65):
-            res += random.choice(
+            response_predict += random.choice( ##replacement of predicted response
                 [f"Here are some cat videos: {cat_vids}", f"Here are some dank memes: {dank_memes}"])
     elif (positive_vibes >= 0.7):
         empathy_response = random.choice([":)", "Happy spring!!!", "I'm glad that you're satistifed with my service.",
