@@ -32,11 +32,11 @@ def send():
 
     response_predict = get_response(ints, intents)
 
-    if (negative_vibes >= 0.6):
+    if (negative_vibes >= 0.55):
         empathy_response = random.choice(["I am really sorry to hear that.", "We're sorry about that...",
                                          ":(( That's so unfortunate.", "I understand your sentiment. Please allow me to help you, what do you need to know?"])
         res = empathy_response
-        if (negative_vibes >= 0.7):
+        if (negative_vibes >= 0.65):
             res += random.choice(
                 [f"Here are some cat videos: {cat_vids}", f"Here are some dank memes: {dank_memes}"])
     elif (positive_vibes >= 0.7):
