@@ -6,13 +6,12 @@ import numpy as np
 import nltk
 from nltk.stem import WordNetLemmatizer
 
-from tensorflow.keras.models import Sequential # here
+from tensorflow.keras.models import Sequential  # here
 from tensorflow.keras.layers import Dense, Activation, Dropout
 from tensorflow.keras.optimizers import SGD
 
 import nltk
 nltk.download('punkt')
-import nltk
 nltk.download('wordnet')
 
 lemmatizer = WordNetLemmatizer()
@@ -22,43 +21,50 @@ intents = json.loads(open('intents.json').read())
 words = []
 classes = []
 documents = []
-ignore_letters = ['?', '!', '.', ','] #ignores these characters when reading the json file
+# ignores these characters when reading the json file
+ignore_letters = ['?', '!', '.', ',']
 
 for intent in intents['intents']:
     for input in intent['inputs']:
-        word_list = nltk.word_tokenize(input) #Breaks the senetence into words
+        # Breaks the senetence into words
+        word_list = nltk.word_tokenize(input)
         words.extend(word_list)
-        documents.append((word_list, intent['topics'])) #stores each word with its respective tag
+        # stores each word with its respective tag
+        documents.append((word_list, intent['topics']))
         if intent['topics'] not in classes:
-            classes.append(intent['topics']) #Adds the topic if it is absent in classes
+            # Adds the topic if it is absent in classes
+            classes.append(intent['topics'])
 
 print(documents)
 
-words = [lemmatizer.lemmatize(word) #lemmatizes words to recognise inputs easily
+words = [lemmatizer.lemmatize(word)  # lemmatizes words to recognise inputs easily
          for word in words if word not in ignore_letters]
-words = sorted(set(words)) 
+words = sorted(set(words))
 
 classes = sorted(set(classes))
 
-pickle.dump(words, open('words.pk1', 'wb')) #stores words into a pickle file
-pickle.dump(classes, open('classes.pk1', 'wb')) #stores classes into a pickle file
+pickle.dump(words, open('words.pk1', 'wb'))  # stores words into a pickle file
+# stores classes into a pickle file
+pickle.dump(classes, open('classes.pk1', 'wb'))
 
 training = []
-output_empty = [0] * len(classes) 
+output_empty = [0] * len(classes)
 
 for document in documents:
     bag = []
     word_inputs = document[0]
-    word_inputs = [lemmatizer.lemmatize(word.lower()) for word in word_inputs] 
+    word_inputs = [lemmatizer.lemmatize(word.lower()) for word in word_inputs]
     for word in words:
-        bag.append(1) if word in word_inputs else bag.append(0) #if the word is present in word_input we index it as 1, if not we index it as 0
+        # if the word is present in word_input we index it as 1, if not we index it as 0
+        bag.append(1) if word in word_inputs else bag.append(0)
 
     output_row = list(output_empty)
     output_row[classes.index(document[1])] = 1
-    training.append([bag, output_row]) # Adds all the document words as 0s and 1s in the training variable
+    # Adds all the document words as 0s and 1s in the training variable
+    training.append([bag, output_row])
 
-#Building Nerual Network
-    
+# Building Nerual Network
+
 random.shuffle(training)
 training = np.array(training)
 
@@ -77,6 +83,6 @@ model.compile(loss='categorical_crossentropy',
               optimizer=sgd, metrics=['accuracy'])
 
 hist = model.fit(np.array(train_x), np.array(train_y),
-          epochs=200, batch_size=5, verbose=1)
-model.save('chatbot_model.h5', hist) #export the ML model
+                 epochs=200, batch_size=5, verbose=1)
+model.save('chatbot_model.h5', hist)  # export the ML model
 print("Done")
