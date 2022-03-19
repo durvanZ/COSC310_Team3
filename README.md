@@ -18,3 +18,5 @@ Several libraries were used: random, json, pickle, numpy, nltk, and tensorflow.
 
 ### Assignment 2 tasks:
 Lakshay Karnwal - Worked on creating a graphical user interface for the user to enter the text in a chatbox and see the history of chat on the display screen. Also worked on creating the test.py module. The test.py module uses pytest framework to test important functions of the chatbot.
+
+![GUI Screenshot]("https://user-images.githubusercontent.com/60047109/159101357-051933d3-6567-40e7-bb1d-87293c75a9fe.png")
