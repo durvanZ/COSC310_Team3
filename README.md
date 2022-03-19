@@ -11,9 +11,10 @@ Several libraries were used: random, json, pickle, numpy, nltk, and tensorflow.
   
 ## COSC 310 Group members:
 - Guiherme Durvan Zandamela
-- Lakshay Karnwal
+- Lakshay Karnwal (37530722)
 - Abdulaziz Almutlaq
 - Ravil Bigvava
 - Jordan onwuvuche
 
-
+### Assignment 2 tasks:
+Lakshay Karnwal - Worked on creating a graphical user interface for the user to enter the text in a chatbox and see the history of chat on the display screen. Also worked on creating the test.py module. The test.py module uses pytest framework to test important functions of the chatbot.
