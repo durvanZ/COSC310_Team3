@@ -35,7 +35,11 @@ In the screenshot example above, one of the functions failed because the value o
 
 We used a natural language toolkit "Sentiment intensity analyzer" to obtain positivity and negativity scores from the words in the user input. This information was used to make conditional statements in which the response of the bot is either complemented or replaced (depending on the intensity) by a response designed to address the sentiment of the user.
 
+![Sentiment analysis demo](https://raw.githubusercontent.com/durvanZ/COSC310_Team3/main/screenshots/sentimentdemo.png)
+
 #### Word stemming in ambiguous cases
 
 Word stemming was used in addition to unstemmed input. Our algorithm stems the user input if the bot is not able to find a probable intent (probability > 0.50).
 This helps to prevent inaccurate responses and can address suffixes.
+
+![Sentiment analysis demo](https://raw.githubusercontent.com/durvanZ/COSC310_Team3/main/screenshots/sentimentdemo.png)
