@@ -1,7 +1,7 @@
 from predict import *
 from tkinter import *
 
-empathy_response = ""
+
 cat_vids = "https://www.youtube.com/results?search_query=cat+videos"
 dank_memes = "https://www.reddit.com/r/dankmemes/"
 res = ""
@@ -9,9 +9,10 @@ root = Tk()
 
 
 def send():
-
+    
     message = e.get()
     usermood = get_mood(message)
+    empathy_response = ""
     negative_vibes = usermood.get('neg')
     positive_vibes = usermood.get('pos')
     
@@ -23,17 +24,17 @@ def send():
     response_predict = get_response(ints, intents)
 
     if (negative_vibes >= 0.6):
-        empathy_response = random.choice(["I am really sorry to hear that", "We're sorry about that...",
-                                         ":(( That's so unfortunate", "I understand your sentiment. Please allow me to help you, what do you need to know?"])
+        empathy_response = random.choice(["I am really sorry to hear that.", "We're sorry about that...",
+                                         ":(( That's so unfortunate.", "I understand your sentiment. Please allow me to help you, what do you need to know?"])
         res = empathy_response
         if (negative_vibes >= 0.7):
             res += random.choice(
                 [f"Here are some cat videos: {cat_vids}", f"Here are some dank memes: {dank_memes}"])
     elif (positive_vibes >= 0.7):
-        empathy_response = random.choice([":)", "Happy spring!!!", "I'm glad you're satistifed with my service",
-                                         "Fantastic!!!", "Awesome", "I love to hear that", "You fill my heart with joy :))"])+"\n"
+        empathy_response = random.choice([":)", "Happy spring!!!", "I'm glad that you're satistifed with my service.",
+                                         "Fantastic!!!", "Awesome!", "I LOVE to hear that!", "You fill my heart with joy :))"])+"\n"
    
-    final_response = "Bot: {0}".format(empathy_response) + response_predict
+    final_response = "Bot: {0} ".format(empathy_response) + response_predict
     txt.insert(END, "\n" + final_response)
     e.delete(0, END)
 
