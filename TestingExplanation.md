@@ -1,6 +1,6 @@
 ## UNIT TESTING Explanation
 
-Unit Testing Framework: Pytest for Python. I used the assert keyword from Pytest module to check if the return values of the function produce the desired result.
+Unit Testing Framework: Pytest for Python. We used the assert keyword from Pytest module to check if the return values of the function produce the desired result.
 
 ![Assert keyword Screenshot](https://user-images.githubusercontent.com/60047109/159103547-d9933464-a8b3-4644-9e3c-377accb6cc31.png)
 
