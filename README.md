@@ -20,7 +20,7 @@ Several libraries were used: random, json, pickle, numpy, nltk, and tensorflow.
 Lakshay Karnwal - Worked on creating a graphical user interface for the user using python module tkinter - to enter the text in a chatbox and see the history of chat on the display screen. Also worked on creating the test.py module. The test.py module uses pytest framework to test important functions of the chatbot.
 
 #### GUI Implementation
-![GUI Screenshot](https://user-images.githubusercontent.com/60047109/159101357-051933d3-6567-40e7-bb1d-87293c75a9fe.png)
+![GUI Screenshot](https://user-images.githubusercontent.com/60047109/botdemo.png)
 
 The GUI was implemented using the Python tkinter module for graphical interfaces. Using this module I was able to easily create a text box where the user enters their query/text. The text entered in the text box is then displayed on the GUI screen along with the Chatbot's response. This helps the user see the chat just like on any traditional chatting application. This helps the app become intuitivey easy-to-use for the user.
 
