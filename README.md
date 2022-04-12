@@ -43,3 +43,10 @@ Word stemming was used in addition to unstemmed input. Our algorithm stems the u
 This helps to prevent inaccurate responses and can address suffixes.
 
 ![Sentiment analysis demo](https://raw.githubusercontent.com/durvanZ/COSC310_Team3/main/screenshots/sentimentdemo.png)
+
+
+Flickr API:
+The Flickr API helps the user to show what the words used by the chatbot mean and it shows the associated images with that particular word used in the conversation held. It displays relevant pictures about the words on request made by the customer.
+
+Wikipedi API:
+The Wikipedia API helps the user be redirected to a Wikipedia page if they want to learn more about something. The user is being given a link to read and learn more. This helps the customers get more information on request and help them make wise decisions.
